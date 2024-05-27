@@ -1,0 +1,31 @@
+.app-content-full-height {
+	height: 100%;
+	
+	& .app-content {
+		@include media-breakpoint-up(md) {
+			height: calc(100vh - #{$app-header-height});
+		}
+		@include media-breakpoint-down(md) {
+			min-height: calc(100vh - #{$app-header-height * 2 + 1});
+		}
+	}
+
+	& #content-wrap {
+		padding-bottom: 0;	
+		margin-bottom: 0;	
+	}
+	& .app-footer {
+		position: relative;
+		width: auto;
+		background-color: var(--app-header-input-bg);
+		text-align: center;
+	}
+	&.app-without-header,
+	&.app-empty {
+		& .app-content {
+			@include media-breakpoint-up(md) {
+				height: 100vh;
+			}
+		}
+	}
+}

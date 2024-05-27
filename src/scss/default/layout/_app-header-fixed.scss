@@ -1,0 +1,23 @@
+/* .app-header-fixed {
+	padding-top: $app-header-height * 2 - rem(10px);
+	
+	@include media-breakpoint-down(md) {
+		padding-top: ($app-header-height-sm) + rem(12px);
+	}
+	
+	& .app-header {
+		position: fixed;
+	}
+} //para o caso do uso com top menu */
+
+.app-header-fixed {
+	padding-top: $app-header-height;
+	
+	@include media-breakpoint-down(md) {
+		padding-top: ($app-header-height-sm * 2) + rem(1px);
+	}
+	
+	& .app-header {
+		position: fixed;
+	}
+}

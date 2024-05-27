@@ -1,0 +1,9 @@
+.app-with-accessibility{
+    & .app-sidebar {
+        top: 48px;
+    }
+
+    & #page-content {
+        min-height: 85vh;
+    }
+}

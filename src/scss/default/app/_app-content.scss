@@ -1,0 +1,51 @@
+#page-content {
+	position: relative;
+	min-height: 87.5vh;
+}
+
+#content-wrap {
+	padding-bottom: 2.5rem; //comenta qdo tem top menu
+	margin-bottom: 10px; //comenta qdto tem top menu
+}
+.app-content {
+	margin-left: $app-sidebar-width; //comenta qdo tem top menu
+	padding: $app-content-padding-y $app-content-padding-x;
+	//padding: 60px 90px 15px 90px; //no caso do top menu
+	
+	& .app-content-container {
+		margin: (-$app-content-padding-y) (-$app-content-padding-x);
+		padding: $app-content-padding-y $app-content-padding-x;
+		
+		@include media-breakpoint-down(md) {
+			margin: (-$app-content-padding-y-sm) (-$app-content-padding-x-sm);
+			padding: $app-content-padding-y-sm $app-content-padding-x-sm;
+		}
+	}
+	& .app-content-margin {
+		margin: (-$app-content-padding-y) (-$app-content-padding-x);
+		
+		@include media-breakpoint-down(md) {
+			margin: (-$app-content-padding-y-sm) (-$app-content-padding-x-sm);
+		}
+	}
+	& .app-content-padding {
+		padding: $app-content-padding-y $app-content-padding-x;
+		
+		@include media-breakpoint-down(md) {
+			padding: $app-content-padding-y-sm $app-content-padding-x-sm;
+		}
+	}
+	
+	@if $enable-rtl {
+		margin-left: 0;
+		margin-right: $app-sidebar-width;
+	}
+	@include media-breakpoint-down(md) {
+		margin-left: 0;
+		padding: $app-content-padding-y-sm $app-content-padding-x-sm;
+		
+		@if $enable-rtl {
+			margin-right: 0;
+		}
+	}
+}

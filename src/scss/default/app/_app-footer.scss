@@ -1,0 +1,22 @@
+.app-footerTop {
+	padding: $app-top-menu-component-padding-y;
+	border-top: 1px solid $app-footer-border;
+	font-weight: $font-weight-bold;
+	color: $app-footer-color-light;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	background-color: $green-sag;
+}
+
+
+.app-footerSidebar {
+	padding: $app-top-menu-component-padding-y;
+	border-top: 1px solid $app-footer-border;
+	font-weight: $font-weight-bold;
+	color: $app-footer-color;
+	position: absolute;
+	bottom: 0;
+	width: 95%;
+}
+
